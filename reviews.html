@@ -237,11 +237,9 @@
             star.addEventListener('click', function() {
                 selectedRating = parseInt(this.getAttribute('data-value'));
                 stars.forEach(function(s) {
-                    if (parseInt(s.getAttribute('data-value')) <= selectedRating) {
-                        s.classList.add('selected');
-                    } else {
-                        s.classList.remove('selected');
-                    }
+                    var val = parseInt(s.getAttribute('data-value')) <= selectedRating;
+                    s.classList.toggle('selected', val);
+                    s.setAttribute('aria-checked', val ? 'true' : 'false');
                 });
                 document.getElementById('star-error').style.display = 'none';
             });

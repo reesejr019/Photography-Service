@@ -251,14 +251,24 @@
         }
 
         function savePhotos(photos) {
-            localStorage.setItem('snapshot_gallery', JSON.stringify(photos));
+            try {
+                localStorage.setItem('snapshot_gallery', JSON.stringify(photos));
+            } catch (e) {
+                alert('Storage limit reached. Your photo could not be saved. Try clearing some community photos via your browser\'s DevTools.');
+            }
         }
 
         // ── Image resize via Canvas ───────────────────────────────────
         function resizeImage(file, callback) {
             var reader = new FileReader();
+            reader.onerror = function() {
+                alert('Could not read the selected file. Please try a different image.');
+            };
             reader.onload = function(e) {
                 var img = new Image();
+                img.onerror = function() {
+                    alert('Could not process the selected image. Please try a different file.');
+                };
                 img.onload = function() {
                     var MAX = 1200;
                     var w = img.width;
@@ -287,6 +297,11 @@
         document.getElementById('upload-file').addEventListener('change', function() {
             var file = this.files[0];
             if (!file) return;
+            if (!file.type.startsWith('image/')) {
+                alert('Please select a valid image file (JPEG, PNG, GIF, WebP, etc.).');
+                this.value = '';
+                return;
+            }
             resizeImage(file, function(dataURL) {
                 document.getElementById('photo-preview').src = dataURL;
                 document.getElementById('photo-preview-wrap').style.display = 'block';

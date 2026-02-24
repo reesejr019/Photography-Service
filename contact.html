@@ -135,6 +135,9 @@
                         </div>
                         <button type="submit" class="btn" style="width: 100%;">Send Message</button>
                     </form>
+                    <div id="contact-success" class="review-success" style="display: none;">
+                        &#10003; Thank you! Your message has been received. We'll be in touch within 24 hours.
+                    </div>
                 </div>
             </div>
         </div>
@@ -231,6 +234,16 @@
         function toggleMenu() {
             document.querySelector('.nav-links').classList.toggle('active');
         }
+
+        document.querySelector('.contact-form form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.reset();
+            var banner = document.getElementById('contact-success');
+            banner.style.display = 'block';
+            setTimeout(function() {
+                banner.style.display = 'none';
+            }, 5000);
+        });
     </script>
 </body>
 </html>
