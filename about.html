@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - SnapShot Photography Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Snap<span>Shot</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>About SnapShot</h1>
+        <p>Learn about our journey, our passion, and the team behind the lens</p>
+    </section>
+
+    <!-- Our Story -->
+    <section>
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=800" alt="Photography Studio">
+                </div>
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2010, SnapShot Photography Studio began with a simple vision: to capture life's most precious moments with artistry, authenticity, and passion. What started as a one-person operation has grown into a full-service photography studio with a team of talented professionals.</p>
+                    <p>Over the years, we've had the privilege of documenting thousands of weddings, countless family milestones, and numerous corporate events. Each project has taught us something new and reinforced our commitment to excellence.</p>
+                    <p>Today, SnapShot is recognized as one of the region's premier photography studios, known for our creative approach, attention to detail, and dedication to client satisfaction.</p>
+                    <a href="contact.html" class="btn">Work With Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Mission & Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">💡</div>
+                    <h3>Creativity</h3>
+                    <p>We approach every project with fresh eyes and creative thinking, ensuring unique and memorable results that stand out.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🤝</div>
+                    <h3>Integrity</h3>
+                    <p>Honesty and transparency are at the core of our business. We deliver what we promise and always put our clients first.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⭐</div>
+                    <h3>Excellence</h3>
+                    <p>We never settle for good enough. Our pursuit of excellence drives us to continuously improve our craft and service.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">❤️</div>
+                    <h3>Passion</h3>
+                    <p>Photography isn't just our profession—it's our passion. We genuinely love what we do, and it shows in our work.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎯</div>
+                    <h3>Attention to Detail</h3>
+                    <p>From composition to post-processing, we pay meticulous attention to every detail to ensure perfection.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌟</div>
+                    <h3>Client Focus</h3>
+                    <p>Your satisfaction is our priority. We listen, understand your vision, and work tirelessly to exceed expectations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Team</h2>
+                <p>The talented professionals behind SnapShot Studio</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="photo">👨‍💼</div>
+                    <div class="info">
+                        <h3>David Mitchell</h3>
+                        <p class="role">Founder & Lead Photographer</p>
+                        <p style="color: #666; margin-top: 0.5rem; font-size: 0.9rem;">15+ years of experience specializing in wedding and portrait photography</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="photo">👩‍💼</div>
+                    <div class="info">
+                        <h3>Rachel Torres</h3>
+                        <p class="role">Senior Photographer</p>
+                        <p style="color: #666; margin-top: 0.5rem; font-size: 0.9rem;">Expert in lifestyle and commercial photography with an artistic touch</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="photo">👨‍💻</div>
+                    <div class="info">
+                        <h3>Marcus Johnson</h3>
+                        <p class="role">Post-Production Specialist</p>
+                        <p style="color: #666; margin-top: 0.5rem; font-size: 0.9rem;">Digital editing wizard ensuring every image is polished to perfection</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="photo">👩‍💻</div>
+                    <div class="info">
+                        <h3>Emma Williams</h3>
+                        <p class="role">Studio Manager</p>
+                        <p style="color: #666; margin-top: 0.5rem; font-size: 0.9rem;">Keeps everything running smoothly and ensures exceptional client experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white;">
+        <div class="container">
+            <div class="features-grid" style="text-align: center;">
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); color: white;">
+                    <div style="font-size: 3rem; font-weight: 700; color: #e94560;">15+</div>
+                    <h3 style="color: white;">Years Experience</h3>
+                </div>
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); color: white;">
+                    <div style="font-size: 3rem; font-weight: 700; color: #e94560;">2500+</div>
+                    <h3 style="color: white;">Projects Completed</h3>
+                </div>
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); color: white;">
+                    <div style="font-size: 3rem; font-weight: 700; color: #e94560;">500+</div>
+                    <h3 style="color: white;">Weddings Captured</h3>
+                </div>
+                <div class="feature-card" style="background: rgba(255,255,255,0.1); color: white;">
+                    <div style="font-size: 3rem; font-weight: 700; color: #e94560;">100%</div>
+                    <h3 style="color: white;">Client Satisfaction</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Let's Create Something Amazing Together</h2>
+        <p>Ready to start your photography journey with us? We'd love to hear from you.</p>
+        <a href="contact.html" class="btn">Contact Us Today</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SnapShot Studio</h4>
+                <p>Capturing life's precious moments with artistry and professionalism since 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Wedding Photography</a></li>
+                    <li><a href="services.html">Portrait Sessions</a></li>
+                    <li><a href="services.html">Corporate Events</a></li>
+                    <li><a href="services.html">Commercial Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>123 Studio Street</li>
+                    <li>Photography City, PC 12345</li>
+                    <li>info@snapshot-studio.com</li>
+                    <li>(555) 123-4567</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SnapShot Photography Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

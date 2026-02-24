@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - SnapShot Photography Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Snap<span>Shot</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Let's start a conversation.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section>
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-item">
+                        <div class="icon">📍</div>
+                        <div>
+                            <h4>Visit Our Studio</h4>
+                            <p>123 Studio Street<br>Photography City, PC 12345</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">📞</div>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>(555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">✉️</div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>info@snapshot-studio.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="icon">🕐</div>
+                        <div>
+                            <h4>Studio Hours</h4>
+                            <p>Mon - Fri: 9:00 AM - 6:00 PM<br>Sat: 10:00 AM - 4:00 PM<br>Sun: By Appointment</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service...</option>
+                                <option value="wedding">Wedding Photography</option>
+                                <option value="portrait">Portrait Session</option>
+                                <option value="event">Event Coverage</option>
+                                <option value="product">Product Photography</option>
+                                <option value="commercial">Commercial Photography</option>
+                                <option value="engagement">Engagement Session</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Preferred Date (if applicable)</label>
+                            <input type="date" id="date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project, vision, and any specific requirements..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="referral">How did you hear about us?</label>
+                            <select id="referral" name="referral">
+                                <option value="">Select an option...</option>
+                                <option value="google">Google Search</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="facebook">Facebook</option>
+                                <option value="referral">Friend/Family Referral</option>
+                                <option value="wedding-site">Wedding Planning Site</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section style="background: white; padding: 0;">
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); height: 400px; display: flex; align-items: center; justify-content: center; color: white; text-align: center;">
+            <div>
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🗺️</div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">Find Us on the Map</h3>
+                <a href="https://www.google.com/maps/search/?api=1&query=123+Studio+Street,+Photography+City,+PC+12345" target="_blank" style="color: #e94560; text-decoration: underline; font-size: 1.1rem;">123 Studio Street, Photography City, PC 12345</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Info -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Before Your Visit</h2>
+                <p>A few things to know before coming to our studio</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">🅿️</div>
+                    <h3>Parking</h3>
+                    <p>Free parking is available in the lot behind our building. Street parking is also available on Studio Street.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">👔</div>
+                    <h3>What to Wear</h3>
+                    <p>For consultations, come as you are! For sessions, we'll discuss wardrobe recommendations beforehand.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📋</div>
+                    <h3>What to Bring</h3>
+                    <p>Bring any inspiration photos, mood boards, or ideas you'd like to discuss. We love seeing your vision!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Create Lasting Memories?</h2>
+        <p>Fill out the form above or give us a call. We typically respond within 24 hours.</p>
+        <a href="tel:5551234567" class="btn">Call (555) 123-4567</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SnapShot Studio</h4>
+                <p>Capturing life's precious moments with artistry and professionalism since 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Wedding Photography</a></li>
+                    <li><a href="services.html">Portrait Sessions</a></li>
+                    <li><a href="services.html">Corporate Events</a></li>
+                    <li><a href="services.html">Commercial Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>123 Studio Street</li>
+                    <li>Photography City, PC 12345</li>
+                    <li>info@snapshot-studio.com</li>
+                    <li>(555) 123-4567</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SnapShot Photography Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

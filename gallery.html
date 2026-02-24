@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - SnapShot Photography Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Snap<span>Shot</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Our Gallery</h1>
+        <p>Explore our portfolio and see photos shared by our clients</p>
+    </section>
+
+    <!-- Studio Portfolio Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Studio Portfolio</h2>
+                <p>A curated collection of our finest work across all photography categories</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="gallery-filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="wedding">Weddings</button>
+                <button class="filter-btn" data-filter="portrait">Portraits</button>
+                <button class="filter-btn" data-filter="event">Events</button>
+                <button class="filter-btn" data-filter="product">Product</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="engagement">Engagements</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="gallery-grid" id="portfolio-grid">
+                <div class="gallery-item" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" alt="Wedding Photography">
+                    <div class="gallery-overlay">
+                        <h3>Wedding Photography</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1606216794074-735e91aa2c92?w=600" alt="Wedding Photography">
+                    <div class="gallery-overlay">
+                        <h3>Wedding Photography</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600" alt="Wedding Photography">
+                    <div class="gallery-overlay">
+                        <h3>Wedding Photography</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600" alt="Portrait Sessions">
+                    <div class="gallery-overlay">
+                        <h3>Portrait Sessions</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600" alt="Portrait Sessions">
+                    <div class="gallery-overlay">
+                        <h3>Portrait Sessions</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="portrait">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" alt="Portrait Sessions">
+                    <div class="gallery-overlay">
+                        <h3>Portrait Sessions</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="event">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600" alt="Event Coverage">
+                    <div class="gallery-overlay">
+                        <h3>Event Coverage</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="event">
+                    <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600" alt="Event Coverage">
+                    <div class="gallery-overlay">
+                        <h3>Event Coverage</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="product">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600" alt="Product Photography">
+                    <div class="gallery-overlay">
+                        <h3>Product Photography</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="commercial">
+                    <img src="https://images.unsplash.com/photo-1486401899868-0e435ed85128?w=600" alt="Commercial Photography">
+                    <div class="gallery-overlay">
+                        <h3>Commercial Photography</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="engagement">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600" alt="Engagement Sessions">
+                    <div class="gallery-overlay">
+                        <h3>Engagement Sessions</h3>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="engagement">
+                    <img src="https://images.unsplash.com/photo-1529634806980-85c3dd6d34ac?w=600" alt="Engagement Sessions">
+                    <div class="gallery-overlay">
+                        <h3>Engagement Sessions</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Your Photo Section -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Share Your Photo</h2>
+                <p>Received photos from us? We'd love to feature your favourites in our community gallery</p>
+            </div>
+            <div class="gallery-upload-card">
+                <form id="upload-form">
+                    <div class="form-group">
+                        <label for="upload-name">Your Name *</label>
+                        <input type="text" id="upload-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="upload-caption">Photo Caption *</label>
+                        <input type="text" id="upload-caption" name="caption" placeholder="A short description of your photo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="upload-file">Upload Photo *</label>
+                        <input type="file" id="upload-file" name="photo" accept="image/*" required>
+                        <div class="photo-preview-wrap" id="photo-preview-wrap">
+                            <img id="photo-preview" src="" alt="Preview">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn">Share Photo</button>
+                </form>
+                <div class="gallery-success" id="gallery-success">
+                    &#10003; Thank you! Your photo has been added to the community gallery.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Photos Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Community Photos</h2>
+                <p>Photos shared by our wonderful clients</p>
+            </div>
+            <div class="community-grid" id="community-grid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SnapShot Studio</h4>
+                <p>Capturing life's precious moments with artistry and professionalism since 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Wedding Photography</a></li>
+                    <li><a href="services.html">Portrait Sessions</a></li>
+                    <li><a href="services.html">Corporate Events</a></li>
+                    <li><a href="services.html">Commercial Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>123 Studio Street</li>
+                    <li>Photography City, PC 12345</li>
+                    <li>info@snapshot-studio.com</li>
+                    <li>(555) 123-4567</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SnapShot Photography Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // ── Filter logic ──────────────────────────────────────────────
+        var filterBtns = document.querySelectorAll('.filter-btn');
+        var galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+
+                var filter = btn.getAttribute('data-filter');
+                galleryItems.forEach(function(item) {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // ── localStorage helpers ──────────────────────────────────────
+        function loadPhotos() {
+            try {
+                return JSON.parse(localStorage.getItem('snapshot_gallery')) || [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function savePhotos(photos) {
+            localStorage.setItem('snapshot_gallery', JSON.stringify(photos));
+        }
+
+        // ── Image resize via Canvas ───────────────────────────────────
+        function resizeImage(file, callback) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var img = new Image();
+                img.onload = function() {
+                    var MAX = 1200;
+                    var w = img.width;
+                    var h = img.height;
+                    if (w > MAX || h > MAX) {
+                        if (w >= h) {
+                            h = Math.round(h * MAX / w);
+                            w = MAX;
+                        } else {
+                            w = Math.round(w * MAX / h);
+                            h = MAX;
+                        }
+                    }
+                    var canvas = document.createElement('canvas');
+                    canvas.width = w;
+                    canvas.height = h;
+                    canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+                    callback(canvas.toDataURL('image/jpeg', 0.82));
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // ── File input preview ────────────────────────────────────────
+        document.getElementById('upload-file').addEventListener('change', function() {
+            var file = this.files[0];
+            if (!file) return;
+            resizeImage(file, function(dataURL) {
+                document.getElementById('photo-preview').src = dataURL;
+                document.getElementById('photo-preview-wrap').style.display = 'block';
+            });
+        });
+
+        // ── Escape HTML helper ────────────────────────────────────────
+        function escapeHTML(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        // ── Render community photos ───────────────────────────────────
+        function renderCommunityPhotos() {
+            var grid = document.getElementById('community-grid');
+            var photos = loadPhotos().slice().reverse();
+
+            if (photos.length === 0) {
+                grid.innerHTML = '<p style="text-align: center; color: var(--text-light); grid-column: 1 / -1; padding: 2rem 0;">No community photos yet. Be the first to share yours!</p>';
+                return;
+            }
+
+            grid.innerHTML = photos.map(function(p) {
+                return '<div class="community-card">' +
+                    '<img src="' + p.imageData + '" alt="' + escapeHTML(p.caption) + '">' +
+                    '<div class="community-card-info">' +
+                        '<h4>' + escapeHTML(p.caption) + '</h4>' +
+                        '<p>Shared by ' + escapeHTML(p.name) + ' &middot; ' + escapeHTML(p.date) + '</p>' +
+                    '</div>' +
+                '</div>';
+            }).join('');
+        }
+
+        // ── Upload form submit ────────────────────────────────────────
+        document.getElementById('upload-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var nameVal    = document.getElementById('upload-name').value.trim();
+            var captionVal = document.getElementById('upload-caption').value.trim();
+            var fileInput  = document.getElementById('upload-file');
+            var file       = fileInput.files[0];
+
+            if (!file) return;
+
+            var form = this;
+            resizeImage(file, function(dataURL) {
+                var photo = {
+                    id:        'photo-' + Date.now(),
+                    name:      nameVal,
+                    caption:   captionVal,
+                    imageData: dataURL,
+                    date:      new Date().toISOString().slice(0, 10)
+                };
+
+                var photos = loadPhotos();
+                photos.push(photo);
+                savePhotos(photos);
+                renderCommunityPhotos();
+
+                // Reset form
+                form.reset();
+                document.getElementById('photo-preview-wrap').style.display = 'none';
+                document.getElementById('photo-preview').src = '';
+
+                // Show success banner for 5 s
+                var banner = document.getElementById('gallery-success');
+                banner.style.display = 'block';
+                setTimeout(function() {
+                    banner.style.display = 'none';
+                }, 5000);
+            });
+        });
+
+        // ── Initial render ────────────────────────────────────────────
+        renderCommunityPhotos();
+    </script>
+</body>
+</html>

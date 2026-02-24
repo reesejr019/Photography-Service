@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews - SnapShot Photography Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Snap<span>Shot</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Client Reviews</h1>
+        <p>Hear what our clients have to say about their experience with SnapShot</p>
+    </section>
+
+    <!-- Review Form -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Share Your Experience</h2>
+                <p>We'd love to hear about your session with us</p>
+            </div>
+            <div class="review-form-card">
+                <form id="review-form">
+                    <div class="form-group">
+                        <label for="review-name">Full Name *</label>
+                        <input type="text" id="review-name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-service">Service Type *</label>
+                        <select id="review-service" name="service" required>
+                            <option value="">Select a service...</option>
+                            <option value="Wedding Photography">Wedding Photography</option>
+                            <option value="Portrait Sessions">Portrait Sessions</option>
+                            <option value="Event Coverage">Event Coverage</option>
+                            <option value="Product Photography">Product Photography</option>
+                            <option value="Commercial Photography">Commercial Photography</option>
+                            <option value="Engagement Sessions">Engagement Sessions</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Star Rating *</label>
+                        <div class="star-rating" id="star-rating" role="group" aria-label="Star rating">
+                            <span class="star" data-value="1" tabindex="0" role="radio" aria-label="1 star">★</span>
+                            <span class="star" data-value="2" tabindex="0" role="radio" aria-label="2 stars">★</span>
+                            <span class="star" data-value="3" tabindex="0" role="radio" aria-label="3 stars">★</span>
+                            <span class="star" data-value="4" tabindex="0" role="radio" aria-label="4 stars">★</span>
+                            <span class="star" data-value="5" tabindex="0" role="radio" aria-label="5 stars">★</span>
+                        </div>
+                        <div class="field-error" id="star-error" style="display: none;">Please select a star rating.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Your Review *</label>
+                        <textarea id="review-text" name="text" placeholder="Tell us about your experience..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit Review</button>
+                </form>
+                <div class="review-success" id="review-success" style="display: none;">
+                    &#10003; Thank you! Your review has been submitted successfully.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Display -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Real feedback from customers who trusted us with their special moments</p>
+            </div>
+            <div class="testimonials-grid" id="reviews-grid"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SnapShot Studio</h4>
+                <p>Capturing life's precious moments with artistry and professionalism since 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Wedding Photography</a></li>
+                    <li><a href="services.html">Portrait Sessions</a></li>
+                    <li><a href="services.html">Corporate Events</a></li>
+                    <li><a href="services.html">Commercial Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>123 Studio Street</li>
+                    <li>Photography City, PC 12345</li>
+                    <li>info@snapshot-studio.com</li>
+                    <li>(555) 123-4567</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SnapShot Photography Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        // Seed reviews — always displayed, never stored in localStorage
+        var SEED_REVIEWS = [
+            {
+                id: 'seed-1',
+                name: 'Amanda & Chris R.',
+                service: 'Wedding Photography',
+                rating: 5,
+                text: 'SnapShot captured our wedding flawlessly. Every photo tells a story. Worth every penny of the Premium package!',
+                date: '2024-06-15'
+            },
+            {
+                id: 'seed-2',
+                name: 'Mark Thompson',
+                service: 'Product Photography',
+                rating: 5,
+                text: 'Our product photos boosted online sales immediately. Professional, fast, and excellent quality. Highly recommend!',
+                date: '2024-07-22'
+            },
+            {
+                id: 'seed-3',
+                name: 'Lisa Martinez',
+                service: 'Portrait Sessions',
+                rating: 5,
+                text: "The family portrait session was relaxed and fun. The photos exceeded our expectations. We'll definitely be back!",
+                date: '2024-08-10'
+            }
+        ];
+
+        function loadReviews() {
+            try {
+                return JSON.parse(localStorage.getItem('snapshot_reviews')) || [];
+            } catch (e) {
+                return [];
+            }
+        }
+
+        function saveReviews(reviews) {
+            localStorage.setItem('snapshot_reviews', JSON.stringify(reviews));
+        }
+
+        function escapeHTML(str) {
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+
+        function starsHTML(rating) {
+            var out = '';
+            for (var i = 1; i <= 5; i++) {
+                out += i <= rating ? '★' : '☆';
+            }
+            return out;
+        }
+
+        function renderReviews() {
+            var grid = document.getElementById('reviews-grid');
+            var userReviews = loadReviews().slice().reverse();
+            var allReviews = SEED_REVIEWS.concat(userReviews);
+
+            grid.innerHTML = allReviews.map(function(r) {
+                return '<div class="testimonial-card">' +
+                    '<div style="color: #f5a623; font-size: 1.2rem; margin-bottom: 1rem;">' + starsHTML(r.rating) + '</div>' +
+                    '<p class="quote">&ldquo;' + escapeHTML(r.text) + '&rdquo;</p>' +
+                    '<div class="author">' +
+                        '<div class="avatar">' + escapeHTML(r.name.charAt(0).toUpperCase()) + '</div>' +
+                        '<div class="author-info">' +
+                            '<h4>' + escapeHTML(r.name) + '</h4>' +
+                            '<p>' + escapeHTML(r.service) + ' - ' + r.rating + '/5</p>' +
+                            '<p class="review-date">' + escapeHTML(r.date) + '</p>' +
+                        '</div>' +
+                    '</div>' +
+                '</div>';
+            }).join('');
+        }
+
+        // Star rating widget
+        var selectedRating = 0;
+        var stars = document.querySelectorAll('.star');
+
+        stars.forEach(function(star) {
+            star.addEventListener('mouseover', function() {
+                var val = parseInt(this.getAttribute('data-value'));
+                stars.forEach(function(s) {
+                    if (parseInt(s.getAttribute('data-value')) <= val) {
+                        s.classList.add('hovered');
+                    } else {
+                        s.classList.remove('hovered');
+                    }
+                });
+            });
+
+            star.addEventListener('click', function() {
+                selectedRating = parseInt(this.getAttribute('data-value'));
+                stars.forEach(function(s) {
+                    if (parseInt(s.getAttribute('data-value')) <= selectedRating) {
+                        s.classList.add('selected');
+                    } else {
+                        s.classList.remove('selected');
+                    }
+                });
+                document.getElementById('star-error').style.display = 'none';
+            });
+
+            star.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.click();
+                }
+            });
+        });
+
+        document.getElementById('star-rating').addEventListener('mouseleave', function() {
+            stars.forEach(function(s) {
+                s.classList.remove('hovered');
+            });
+        });
+
+        // Form submission
+        document.getElementById('review-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (selectedRating === 0) {
+                document.getElementById('star-error').style.display = 'block';
+                return;
+            }
+
+            var review = {
+                id: 'user-' + Date.now(),
+                name: document.getElementById('review-name').value.trim(),
+                service: document.getElementById('review-service').value,
+                rating: selectedRating,
+                text: document.getElementById('review-text').value.trim(),
+                date: new Date().toISOString().slice(0, 10)
+            };
+
+            var reviews = loadReviews();
+            reviews.push(review);
+            saveReviews(reviews);
+            renderReviews();
+
+            // Reset form state
+            this.reset();
+            selectedRating = 0;
+            stars.forEach(function(s) {
+                s.classList.remove('selected', 'hovered');
+            });
+
+            // Show success banner for 5 seconds
+            var banner = document.getElementById('review-success');
+            banner.style.display = 'block';
+            setTimeout(function() {
+                banner.style.display = 'none';
+            }, 5000);
+        });
+
+        // Initial render
+        renderReviews();
+    </script>
+</body>
+</html>

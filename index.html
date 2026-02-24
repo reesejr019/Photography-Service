@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapShot Photography Studio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Snap<span>Shot</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Capturing Life's Beautiful Moments</h1>
+            <p>Professional photography services for weddings, portraits, events, and commercial projects</p>
+            <a href="services.html" class="btn">Explore Our Services</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose SnapShot?</h2>
+                <p>We bring creativity, professionalism, and passion to every shoot</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">📸</div>
+                    <h3>Professional Equipment</h3>
+                    <p>State-of-the-art cameras and lighting equipment to ensure stunning, high-quality images every time.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎨</div>
+                    <h3>Creative Vision</h3>
+                    <p>Our team brings artistic expertise and fresh perspectives to create unique, memorable photographs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Quick Turnaround</h3>
+                    <p>Professional editing and delivery within agreed timelines, because we value your time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Preview -->
+    <section style="background: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Recent Work</h2>
+                <p>A glimpse into our portfolio of stunning photography</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600" alt="Wedding Photography">
+                    <div class="gallery-overlay">
+                        <h3>Wedding Photography</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600" alt="Portrait Session">
+                    <div class="gallery-overlay">
+                        <h3>Portrait Session</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600" alt="Corporate Event">
+                    <div class="gallery-overlay">
+                        <h3>Corporate Event</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600" alt="Product Photography">
+                    <div class="gallery-overlay">
+                        <h3>Product Photography</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=600" alt="Engagement Shoot">
+                    <div class="gallery-overlay">
+                        <h3>Engagement Shoot</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600" alt="Family Portrait">
+                    <div class="gallery-overlay">
+                        <h3>Family Portrait</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Real feedback from customers who trusted us with their special moments</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div style="color: #f5a623; font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                    <p class="quote">"SnapShot captured our wedding flawlessly. Every photo tells a story. Worth every penny of the Premium package!"</p>
+                    <div class="author">
+                        <div class="avatar">A</div>
+                        <div class="author-info">
+                            <h4>Amanda & Chris R.</h4>
+                            <p>Wedding Photography - 5/5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div style="color: #f5a623; font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                    <p class="quote">"Our product photos boosted online sales immediately. Professional, fast, and excellent quality. Highly recommend!"</p>
+                    <div class="author">
+                        <div class="avatar">M</div>
+                        <div class="author-info">
+                            <h4>Mark Thompson</h4>
+                            <p>Product Photography - 5/5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div style="color: #f5a623; font-size: 1.2rem; margin-bottom: 1rem;">★★★★★</div>
+                    <p class="quote">"The family portrait session was relaxed and fun. The photos exceeded our expectations. We'll definitely be back!"</p>
+                    <div class="author">
+                        <div class="avatar">L</div>
+                        <div class="author-info">
+                            <h4>Lisa Martinez</h4>
+                            <p>Portrait Session - 5/5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Create Something Beautiful?</h2>
+        <p>Let's discuss your vision and bring it to life through stunning photography</p>
+        <a href="contact.html" class="btn">Get In Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SnapShot Studio</h4>
+                <p>Capturing life's precious moments with artistry and professionalism since 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="services.html">Wedding Photography</a></li>
+                    <li><a href="services.html">Portrait Sessions</a></li>
+                    <li><a href="services.html">Corporate Events</a></li>
+                    <li><a href="services.html">Commercial Work</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <ul>
+                    <li>123 Studio Street</li>
+                    <li>Photography City, PC 12345</li>
+                    <li>info@snapshot-studio.com</li>
+                    <li>(555) 123-4567</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SnapShot Photography Studio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
