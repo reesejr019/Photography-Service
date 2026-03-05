@@ -312,6 +312,7 @@
             stars.forEach(function(s) {
                 s.classList.remove('selected', 'hovered');
             });
+            validateReviewForm();
 
             // Show success banner for 5 seconds
             var banner = document.getElementById('review-success');

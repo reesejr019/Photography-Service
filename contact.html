@@ -249,6 +249,7 @@
         document.querySelector('.contact-form form').addEventListener('submit', function(e) {
             e.preventDefault();
             this.reset();
+            validateContactForm();
             var banner = document.getElementById('contact-success');
             banner.style.display = 'block';
             setTimeout(function() {
