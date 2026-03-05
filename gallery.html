@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - SnapShot Photography Studio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .btn:disabled {
+            background: #9e9e9e;
+            color: #e0e0e0;
+            cursor: not-allowed;
+            pointer-events: none;
+            opacity: 0.65;
+            box-shadow: none;
+            transform: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -154,7 +165,7 @@
                             <img id="photo-preview" src="" alt="Preview">
                         </div>
                     </div>
-                    <button type="submit" class="btn">Share Photo</button>
+                    <button type="submit" class="btn" id="gallery-submit" disabled>Share Photo</button>
                 </form>
                 <div class="gallery-success" id="gallery-success">
                     &#10003; Thank you! Your photo has been added to the community gallery.
@@ -379,6 +390,20 @@
             });
         });
 
+
+        // ── Submit button validation ───────────────────────────────────
+        var gallerySubmit = document.getElementById('gallery-submit');
+
+        function validateGalleryForm() {
+            var name    = document.getElementById('upload-name').value.trim();
+            var caption = document.getElementById('upload-caption').value.trim();
+            var hasFile = document.getElementById('upload-file').files.length > 0;
+            gallerySubmit.disabled = !(name && caption && hasFile);
+        }
+
+        document.getElementById('upload-name').addEventListener('input', validateGalleryForm);
+        document.getElementById('upload-caption').addEventListener('input', validateGalleryForm);
+        document.getElementById('upload-file').addEventListener('change', validateGalleryForm);
         // ── Initial render ────────────────────────────────────────────
         renderCommunityPhotos();
     </script>

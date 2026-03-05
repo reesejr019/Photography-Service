@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - SnapShot Photography Studio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .btn:disabled {
+            background: #9e9e9e;
+            color: #e0e0e0;
+            cursor: not-allowed;
+            pointer-events: none;
+            opacity: 0.65;
+            box-shadow: none;
+            transform: none;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -133,7 +144,7 @@
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+                        <button type="submit" class="btn" id="contact-submit" style="width: 100%;" disabled>Send Message</button>
                     </form>
                     <div id="contact-success" class="review-success" style="display: none;">
                         &#10003; Thank you! Your message has been received. We'll be in touch within 24 hours.
@@ -243,6 +254,21 @@
             setTimeout(function() {
                 banner.style.display = 'none';
             }, 5000);
+        });
+
+        // ── Submit button validation ───────────────────────────────────
+        var contactSubmit = document.getElementById('contact-submit');
+        var contactRequiredIds = ['firstName', 'lastName', 'email', 'message'];
+
+        function validateContactForm() {
+            var allFilled = contactRequiredIds.every(function(id) {
+                return document.getElementById(id).value.trim() !== '';
+            });
+            contactSubmit.disabled = !allFilled;
+        }
+
+        contactRequiredIds.forEach(function(id) {
+            document.getElementById(id).addEventListener('input', validateContactForm);
         });
     </script>
 </body>
